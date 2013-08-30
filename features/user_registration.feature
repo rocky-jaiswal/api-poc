@@ -10,8 +10,7 @@ Scenario: Should allow saving a user when all required fields are entered
   And I enter the password "D!ude1234"
   And I enter the password confirmation "D!ude1234"
   And I try to save the user
-  Then I should see the index page
-
+  Then I should see the home page
 
 Scenario: Should not allow saving a user without an email
   Given I am on the application root page

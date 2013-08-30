@@ -2,6 +2,18 @@ Given /^I am on the application root page$/ do
   visit(root_path)
 end
 
+Given /^A valid used is logged in$/ do
+  visit root_path 
+  within("#sign-in") do
+    fill_in('user_email', :with => "jane@example.com")
+    fill_in('user_password', :with => "123456")
+    click_button('Sign In')
+    #save_and_open_page
+    current_path.should == home_path
+    #page.should have_content 'Welcome'
+  end  
+end
+
 When /^I enter the email "(.*?)"$/ do |arg1|
   within("#sign-up") do
     fill_in('user_email', :with => arg1)
@@ -26,7 +38,7 @@ When /^I try to save the user$/ do
   end
 end
 
-Then /^I should see the index page$/ do
+Then /^I should see the home page$/ do
   current_path.should == home_path
 end
 
