@@ -1,2 +1,28 @@
-<h1>Welcome to our application</h1>
-<p>Find me in app/views/pages/index.html.erb</p>
+<div class="row">
+  <div class="small-12 large-5 column" id="offers-request">
+    <h3>Get Offers:</h3>
+
+    <%= form_tag("/offers", method: "post", :id => "offers-form", :class => "custom") do %>
+      <span class="label">Page Size:</span>
+      <select name="page" class="medium">
+        <option value="1" selected>1</option>
+        <% (2..10).each do |i| %>
+          <option value="<%= i %>"><%= i %></option>
+        <% end %>
+      </select>
+      <span class="label"># of Params:</span>
+      <select name="no_of_params" id="no-of-params" class="medium">
+        <option value="1" selected>1</option>
+        <% (2..10).each do |i| %>
+          <option value="<%= i %>"><%= i %></option>
+        <% end %>
+      </select>
+      <span class="label">User Params:</span>
+      <div class="user-params">
+        <input type="text" name="pub0" placeholder="User Param"/>
+      </div>
+      <input type="Submit" value="Submit" class="button"/>
+    <% end %>
+
+  </div>
+</div>

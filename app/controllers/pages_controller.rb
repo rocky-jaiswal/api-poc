@@ -7,4 +7,12 @@ class PagesController < ApplicationController
   def home
   end
 
+  def offers
+    if !params[:pub0] || !params[:page]
+      render :json => {:message => "page and pub0 are required"} and return
+    else
+      render :json => {:message => "ok"} and return
+    end
+  end
+
 end

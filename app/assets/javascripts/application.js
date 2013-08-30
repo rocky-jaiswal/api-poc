@@ -13,4 +13,8 @@
 //= require jquery
 //= require jquery_ujs
 //= require foundation
-//= require_tree .
+//= require libs/jquery.form.min
+//= require libs/backbone/underscore
+//= require libs/backbone/backbone
+//= require main
+//= require_tree ./app/views

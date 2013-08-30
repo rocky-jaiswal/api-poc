@@ -3,8 +3,8 @@ ApiPoc::Application.routes.draw do
   devise_for :users
 
   root :to => 'pages#login'
-
   get 'home' => 'pages#home', :as => 'home'
+  post 'offers' => 'pages#offers', :as => 'offers'
   
   # The priority is based upon order of creation:
   # first created -> highest priority.
