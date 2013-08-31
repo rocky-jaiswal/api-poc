@@ -9,7 +9,7 @@
   </select>
 
   <span class="label">User Id:</span>
-  <input type="text" name="uid" placeholder="User Id" value="<%= current_user.id %>"/>
+  <input type="text" name="uid" placeholder="User Id" value="<%= current_user.id %>" required/>
   
   <span class="label"># of Params:</span>
   <select name="no_of_params" id="no-of-params" class="medium">
@@ -21,7 +21,7 @@
   
   <span class="label">User Params:</span>
   <div class="user-params">
-    <input type="text" name="pub0" placeholder="User Param"/>
+    <input type="text" name="pub0" placeholder="User Param" required/>
   </div>
   <input type="Submit" value="Submit" class="button"/>
 
