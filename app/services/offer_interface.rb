@@ -8,8 +8,7 @@ class OfferInterface
       uri = URI(Figaro.env.SP_URL + query_string)
       Net::HTTP.get_response(uri).body
     rescue Exception => ex
-      msg = {'message' => "Whoops .. an error has occured! Please try again later."}
-      return MultiJson.dump(msg)
+      return MultiJson.dump({'message' => "Whoops .. an error has occured! Please try again later."})
     end
   end
 
