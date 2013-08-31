@@ -1,15 +1,19 @@
 require 'spec_helper'
 
-# Specs in this file have access to a helper object that includes
-# the PagesHelper. For example:
-#
-# describe PagesHelper do
-#   describe "string concat" do
-#     it "concats two strings with spaces" do
-#       expect(helper.concat_strings("this","that")).to eq("this that")
-#     end
-#   end
-# end
 describe PagesHelper do
-  pending "add some examples to (or delete) #{__FILE__}"
+  
+  it "should return the correct class for offers" do
+    offers1 = nil
+    offers2 = []
+    offers3 = ["o1"]
+    helper.get_offer_class(offers1).should == "no_offers"
+    helper.get_offer_class(offers2).should == "no_offers"
+    helper.get_offer_class(offers3).should == "offers"
+  end
+
+  it "should build the offers ui" do
+    offers = [{'title' => "Tap Fish", 'payout' => "25", 'thumbnail' => {'lowres' => 'aa'}}, {'title' => "Tap Fish2", 'payout' => "55", 'thumbnail' => {'lowres' => 'bb'}}]
+    helper.build_offers_ui(offers).should_not be nil
+  end
+  
 end

@@ -4,6 +4,7 @@ gem 'rails', '3.2.14'
 
 gem 'devise'
 gem 'simple_form'
+gem 'figaro'
 gem 'sqlite3'
 gem 'thin'
 
@@ -26,7 +27,8 @@ end
 group :test do
   gem 'factory_girl_rails'
   gem 'cucumber-rails', :require => false
-  gem 'database_cleaner'
+  gem 'selenium-webdriver'
+  gem 'database_cleaner', '< 1.1.0'
   gem 'launchy'
 end
 

@@ -1,0 +1,10 @@
+# Add application configuration variables here, as shown below.
+#
+SP_URL: "http://api.sponsorpay.com/feed/v1/offers.json?"
+SP_API_KEY: "b07a12df7d52e6c118e5d47d3f9e60135b109a1f"
+SP_APP_ID: "157"
+SP_FORMAT: "json"
+SP_DEVICE_ID: "2b6f0cc904d137be2e1730235f5664094b831186"
+SP_IP: "109.235.143.113"
+SP_LOCALE: "de"
+SP_OFFER_TYPES: "112"

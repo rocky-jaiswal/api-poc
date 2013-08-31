@@ -8,9 +8,7 @@ Given /^A valid used is logged in$/ do
     fill_in('user_email', :with => "jane@example.com")
     fill_in('user_password', :with => "123456")
     click_button('Sign In')
-    #save_and_open_page
     current_path.should == home_path
-    #page.should have_content 'Welcome'
   end  
 end
 

@@ -16,5 +16,5 @@
 //= require libs/jquery.form.min
 //= require libs/backbone/underscore
 //= require libs/backbone/backbone
-//= require main
+//= require init
 //= require_tree ./app/views

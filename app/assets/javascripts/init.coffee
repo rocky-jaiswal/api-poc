@@ -1,13 +1,9 @@
 window.PocApp =
-  Models: {}
-  Collections: {}
   Views: {}
-  Routers: {}
-  Utils: {}
 
   init: ->
     mapping =
-      "#offers-request": PocApp.Views.SubmitParamsView
+      "#main-view": PocApp.Views.MainView
 
     initialized = {}
     

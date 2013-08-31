@@ -6,4 +6,6 @@
 
 3. bundle exec rails s
 
-4. Register a user and login
+4. Register as a user and login
+
+5. Submit form and have fun

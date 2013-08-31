@@ -1,0 +1,4 @@
+<div class="<%= get_offer_class(@response['offers']) %>">
+  <div class="message"><%= @response["message"] %></div>
+  <%= build_offers_ui(@response["offers"]) %>
+</div>

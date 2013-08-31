@@ -1,13 +1,13 @@
-class PocApp.Views.SubmitParamsView extends Backbone.View
+class PocApp.Views.MainView extends Backbone.View
 
-  el: "#offers-request"
+  el: "#main-view"
 
   events:
     "change #no-of-params": "checkParams"
     "submit #offers-form" : "handleSubmit"
 
   initialize: ->
-    #console.log "initialized"
+    $(".loading").hide()
 
   checkParams: ->
     noOfParams = $("#no-of-params").val()
@@ -21,14 +21,17 @@ class PocApp.Views.SubmitParamsView extends Backbone.View
     template
 
   getTempl: (i) ->
-    '<input type="text" name="pub' + i + '" placeholder="User Param"/>'
+    '<input type="text" name="pub' + i + '" placeholder="User Param" required/>'
 
   handleSubmit: (e) ->
     e.preventDefault()
-    $(e.currentTarget).ajaxSubmit(success: @handleResponse, error: @handleError)
+    $(".loading").show()
+    $(e.currentTarget).ajaxSubmit(success: @handleSuccess, error: @handleError)
 
-  handleResponse: (response, status, xhr, form) =>
-    console.log response
+  handleSuccess: (response, status, xhr, form) =>
+    $(".response").html response
+    $(".loading").hide()
 
   handleError: (response) =>
     console.log response
+    $(".response").html("<p>Error!!</p>")
