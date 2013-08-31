@@ -12,7 +12,8 @@ class ParamBuilder
     merge_user_params(params)
     add_dynamic_params(params, uid)
     add_static_params()
-    build_query_string()
+    q = build_query_string()
+    add_hash_key(q)
   end
 
   def merge_user_params(params)
@@ -43,7 +44,7 @@ class ParamBuilder
     @req_params.keys.sort.each do |key|
       query = query + key.to_s + "=" + @req_params[key].to_s + "&"
     end
-    add_hash_key(query)
+    query
   end
 
   def add_hash_key(query)
