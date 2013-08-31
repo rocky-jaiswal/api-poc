@@ -8,7 +8,7 @@ Feature: User Login
 Scenario: Should not allow an invalid query
   Given A valid used is logged in
   And I click "Submit" button
-  Then I should see a message "Page Size and atleast one User Param is required."
+  Then I should not see a message "Success"
 
 @javascript
 Scenario: Should give valid offers if all is fine
