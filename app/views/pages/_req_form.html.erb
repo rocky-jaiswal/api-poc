@@ -7,6 +7,9 @@
       <option value="<%= i %>"><%= i %></option>
     <% end %>
   </select>
+
+  <span class="label">User Id:</span>
+  <input type="text" name="uid" placeholder="User Id" value="<%= current_user.id %>"/>
   
   <span class="label"># of Params:</span>
   <select name="no_of_params" id="no-of-params" class="medium">

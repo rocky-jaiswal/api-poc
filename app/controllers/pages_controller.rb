@@ -22,7 +22,9 @@ class PagesController < ApplicationController
   def get_offers(params)
     builder = ParamBuilder.new
     offer_interface = OfferInterface.new
-    query_string = builder.build_params(params, current_user.id)
+    
+    uid = params[:uid] || current_user.id
+    query_string = builder.build_params(params, uid)
     offer_interface.get_offers(query_string)
   end
 
