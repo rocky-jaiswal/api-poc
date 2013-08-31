@@ -4,7 +4,7 @@ require 'multi_json'
 describe OfferInterface do
   
   it "should handle errors gracefully" do
-    Net::HTTP.stub!(:get_response).and_raise
+    Net::HTTP.stub(:get_response).and_raise
 
     i = OfferInterface.new
     resp = i.get_offers("q")

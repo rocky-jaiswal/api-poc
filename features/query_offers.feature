@@ -15,4 +15,4 @@ Scenario: Should give valid offers if all is fine
   Given A valid used is logged in
   And I provide user param "campaign1"
   And I click "Submit" button
-  Then I should see a message "Success"
+  Then I should see a message "Successful"
