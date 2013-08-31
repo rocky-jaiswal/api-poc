@@ -9,7 +9,7 @@ window.PocApp =
     
     for selector, view of mapping
       if $("body").has(selector).length isnt 0
-        view = new view() unless initialized[view.toString()]
+        view = new view({el: selector}) unless initialized[view.toString()]
         initialized[view.toString()] = true
 
 $ ->

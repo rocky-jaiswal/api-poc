@@ -1,7 +1,5 @@
 class PocApp.Views.MainView extends Backbone.View
 
-  el: "#main-view"
-
   events:
     "change #no-of-params": "checkParams"
     "submit #offers-form" : "handleSubmit"
