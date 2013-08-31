@@ -9,3 +9,5 @@
 4. Register as a user and login
 
 5. Submit form and have fun
+
+##Please use Chrome for best results
